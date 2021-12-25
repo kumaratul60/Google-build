@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
+import { Router, useRouter } from "next/router";
 import Header from "../components/Header";
 import SearchResults from "../components/SearchResults";
 import { API_KEY, CONTEXT_KEY } from "../keys";
@@ -11,15 +11,18 @@ function Search({ results }) {
   const router = useRouter();
 
   // console.log(results);
-  
+
   return (
     <div>
       <Head>
         <title> {router.query.term} - Google Search</title>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link
+          rel="icon"
+          href="https://img.icons8.com/fluency/50/000000/google-logo.png"
+        />
       </Head>
 
-      {/* Header */}
       <Header />
       {/* Search Results */}
       <SearchResults results={results} />

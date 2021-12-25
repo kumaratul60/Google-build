@@ -38,7 +38,7 @@ function Header() {
           />
 
           <XIcon
-            className="h-7 text-gray-500 cursor-pointer transition duration-100 transform hover:scale-125"
+            className="h-7 mr-3 text-gray-500 cursor-pointer transition duration-100 transform hover:scale-125"
             onClick={() => {
               searchInputRef.current.value = "";
             }}
